@@ -4,6 +4,11 @@
 
 A production-grade hybrid cloud implementation connecting an **Ubuntu 24.04 VM (VMware Workstation)** to an **AWS VPC** over an encrypted IPSec Site-to-Site VPN using strongSwan. This repo contains the complete step-by-step implementation guide including every issue encountered, root cause analysis, and exact resolution commands.
 
+
+
+<img width="1050" height="747" alt="image" src="https://github.com/user-attachments/assets/e60f0cee-2dfa-43d5-b8e8-98cfaf8203a6" />
+
+
 ---
 
 ## Architecture
