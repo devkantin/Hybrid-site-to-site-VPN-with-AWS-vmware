@@ -1,0 +1,27 @@
+# Copy this file to terraform.tfvars and fill in your values
+# NEVER commit terraform.tfvars if it contains sensitive data
+
+aws_region   = "us-east-1"
+project_name = "hybrid-vpn-lab"
+environment  = "lab"
+
+# VPC
+vpc_cidr             = "10.0.0.0/16"
+private_subnet_cidrs = ["10.0.1.0/24"]
+availability_zones   = ["us-east-1a"]
+
+# On-premises VMware / strongSwan gateway
+customer_gateway_ip = "172.220.62.45"  # Your home router public IP
+on_prem_cidr        = "192.168.91.0/24"
+
+# EC2
+ec2_instance_type = "t3.micro"
+ec2_ami_id        = ""  # Leave empty to auto-select Amazon Linux 2023
+
+# VPN PSKs (sensitive — store in AWS Secrets Manager or SSM Parameter Store in prod)
+# vpn_tunnel1_psk = "your-psk-1-here"
+# vpn_tunnel2_psk = "your-psk-2-here"
+
+# CodeDeploy
+s3_artifact_bucket  = "hybrid-vpn-lab-codedeploy-artifacts"
+codedeploy_app_name = "hybrid-vpn-app"
